@@ -8,12 +8,12 @@ import javax.inject.Inject
 class TransactionalAnnotationTest {
 
     @Inject
-    var entityService: EntityService? = null
+    var personService: PersonService? = null
 
     @Test
     fun testItWorks() {
         val person = Person(1, "first-name")
-        val result = entityService!!.save(person).blockingGet()
+        val result = personService!!.save(person).blockingGet()
         Assertions.assertEquals("first-name", result.name)
     }
 }

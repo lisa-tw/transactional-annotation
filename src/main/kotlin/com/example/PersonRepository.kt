@@ -5,4 +5,4 @@ import io.micronaut.data.model.query.builder.sql.Dialect
 import io.micronaut.data.repository.reactive.RxJavaCrudRepository
 
 @JdbcRepository(dialect = Dialect.H2)
-interface EntityRepository : RxJavaCrudRepository<Person, Long>
+interface PersonRepository : RxJavaCrudRepository<Person, Long>
